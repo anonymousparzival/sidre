@@ -1,4 +1,4 @@
-# 💝 Romantic Quran Gift
+# 💝 Sidre
 
 Senin için özel bir hediye - Herkes çiçek alır... Ben senin için kodladım. 🌼
 
