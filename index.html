@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/flowers.png" type="image/x-icon">
+    <title>Flower Animation</title>
+</head>
+<body>
+    <div class="greetings">
+
+        <span>M</span>
+        <span>E</span>
+        <span>R</span>
+        <span>H</span>
+        <span>A</span>
+        <span>B</span>
+        <span>A</span>
+    </div>
+    <div class="greetings">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="description">
+        <span>Senin için özel bir hediye!</span>
+    </div>
+    <div class="button">
+        <button>
+            <a href="./FLORES.html">Buraya Tıkla</a>
+        </button>
+        
+    </div>
+
+    <script src="./js/music-manager.js"></script>
+    <script>
+      // Sayfa yüklendiğinde müziği başlat (eğer önceki sayfada çalıyorsa)
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.musicManager) {
+          // Kullanıcı etkileşimi bekle (tarayıcı politikası)
+          const startMusic = () => {
+            if (!window.musicManager.isPlaying) {
+              window.musicManager.play().catch(() => {
+                // Otomatik çalma engellendi
+              });
+            }
+          };
+          
+          // Buton tıklama veya sayfa tıklama ile başlat
+          document.querySelector('.button button')?.addEventListener('click', startMusic, { once: true });
+          document.addEventListener('click', startMusic, { once: true });
+        }
+      });
+    </script>
+</body>
+</html>

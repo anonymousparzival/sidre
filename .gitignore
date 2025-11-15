@@ -1,0 +1,34 @@
+# IDE ve Editörler
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules (eğer kullanılıyorsa)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Log dosyaları
+*.log
+npm-debug.log*
+
+# Geçici dosyalar
+*.tmp
+*.temp
+.cache/
+
+# Environment dosyaları (production'da API key'ler için)
+.env
+.env.local
+
+# Build dosyaları
+dist/
+build/
+
+# Backup dosyaları
+*.bak
+*.backup
+

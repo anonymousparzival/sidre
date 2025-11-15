@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kur'an-ı Kerim Oku</title>
+  <link rel="stylesheet" href="./css/quran.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+    }
+    .quran-verse__arabic {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+    }
+  </style>
+</head>
+<body class="quran-page">
+  <!-- Header -->
+  <header class="quran-header">
+    <a href="./FLORES.html" class="quran-header__back">
+      ← Çiçek Ekranına Dön
+    </a>
+    <h1 class="quran-header__title" id="currentSurahTitle">Kur'an-ı Kerim</h1>
+    <div class="quran-header__controls">
+      <select id="surahSelect" class="quran-select">
+        <option value="">Sure Seçiniz...</option>
+      </select>
+      <button class="quran-verse__btn" id="explainSurahBtn" title="Tüm Sure için AI Açıklama" style="display: none;">
+        💬 Sure AI Açıklama
+      </button>
+      <select id="readerSelect" class="quran-select" style="display: none;">
+        <option value="ar.alafasy">Mishary Alafasy</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="quran-verse-container" id="verseContainer">
+    <div class="quran-loading">
+      <div class="quran-loading__spinner"></div>
+      <div class="quran-loading__text">Yükleniyor...</div>
+    </div>
+  </main>
+
+  <!-- Audio Player -->
+  <div class="quran-audio-player" id="audioPlayer" style="display: none;">
+    <div class="audio-player__controls">
+      <button class="audio-player__btn" id="audioPrevBtn" aria-label="Önceki">⏮</button>
+      <button class="audio-player__btn" id="audioPlayBtn" aria-label="Oynat">▶</button>
+      <button class="audio-player__btn" id="audioNextBtn" aria-label="Sonraki">⏭</button>
+    </div>
+    <div class="audio-player__info">
+      <div class="audio-player__surah" id="audioSurah">-</div>
+      <div class="audio-player__ayah" id="audioAyah">-</div>
+    </div>
+    <div class="audio-player__speed">
+      <label for="speedSelect" style="color: var(--quran-text-secondary); font-size: 12px;">Hız:</label>
+      <select id="speedSelect" class="audio-player__speed-select">
+        <option value="0.5">0.5x</option>
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    <!-- Sonraki Ayete Geç Butonu -->
+    <button class="audio-player__next-ayah-btn" id="nextAyahBtn" style="display: none;">
+      ⏭ Sonraki Ayete Geç
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/config.js"></script>
+  <script src="./js/quran-api.js"></script>
+  <script src="./js/quran-player.js"></script>
+  <script src="./js/quran-ai.js"></script>
+  <script src="./js/quran-reader.js"></script>
+</body>
+</html>
+
