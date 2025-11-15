@@ -55,7 +55,7 @@ Bu proje GitHub Pages üzerinden ücretsiz olarak yayınlanabilir.
 ## 📁 Dosya Yapısı
 
 ```
-romantic-quran-gift/
+Sidre/
 ├── index.html          # Ana sayfa
 ├── FLORES.html         # Çiçek animasyonu sayfası
 ├── quran.html          # Kur'an okuma sayfası
